@@ -8,8 +8,8 @@ return {
   },
 
   config = function()
-    vim.keymap.set('n', '<C-b>', ':Neotree filesystem reveal left<CR>', {})
-    vim.keymap.set('n', '<C-e>', ':Neotree filesystem focus<CR>', {})
+    vim.keymap.set('n', '<C-B>', ':Neotree filesystem reveal left<CR>', {})
+    vim.keymap.set('n', '<C-E>', ':Neotree filesystem focus<CR>', {})
   end
 }
 
