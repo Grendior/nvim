@@ -2,11 +2,13 @@ return {
   "nvimtools/none-ls.nvim",
 
   config = function()
-    local null_ls = require("null-ls")
-    null_ls.setup({
+    local none_ls = require("none-ls")
+    none_ls.setup({
       sources = {
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.prettier,
+        none_ls.builtins.formatting.stylua,
+        none_ls.builtins.formatting.prettier,
+        none_ls.builtins.completion.spell,
+        --require("none-ls.diagnostics.eslint"),
         --null_ls.builtins.diagnostics.eslint,
         --null_ls.builtins.code_actions.eslint,
       },
