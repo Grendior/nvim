@@ -1,4 +1,9 @@
 return {
+  { "posva/vim-vue" },
+  {
+    'jlcrochet/vim-razor',
+    ft = {'razor', 'cshtml'},
+  },
   {
     "hrsh7th/cmp-nvim-lsp",
   },

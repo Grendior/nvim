@@ -20,6 +20,9 @@ return {
       local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
       .. "/node_modules/@vue/language-server"
 
+      lspconfig.omnisharp.setup({
+        cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+      })
       lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {
@@ -38,6 +41,7 @@ return {
       lspconfig.volar.setup({
         capabilities = capabilities,
       })
+      lspconfig.clangd.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
